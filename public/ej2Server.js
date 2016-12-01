@@ -2,7 +2,23 @@ var http=require('http');
 var url=require('url');
 var fs=require('fs');
 
-var servidor=http.createServer(function(pedido,respuesta){
+var urlData = url.parse(req.url,true);
+var pathname = "public" + urlData.pathname;
+fs.readFile('pathname', function (err, html) {
+    if (err) {
+        throw err; 
+    }       
+    http.createServer(function(request, response) {  
+        response.writeHeader(200, {"Content-Type": "text/html"});  
+        response.write(html);  
+        response.end();  
+    }).listen(8000);
+});
+
+
+
+
+/*var servidor=http.createServer(function(pedido,respuesta){
     var objetourl = url.parse(pedido.url);
     var camino='static'+objetourl.pathname;
     if (camino=='static/')
@@ -30,20 +46,4 @@ var servidor=http.createServer(function(pedido,respuesta){
 
 servidor.listen(3000);
 
-console.log('Servidor web iniciado');
-
-/*
-var http = require('http'),
-    fs = require('fs');
-
-
-fs.readFile('./index.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(8000);
-});*/
+console.log('Servidor web iniciado');*/
