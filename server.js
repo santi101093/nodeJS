@@ -6,12 +6,19 @@ var server= http.createServer();
 server.on("request", function(req,res){
 	var urlData = url.parse(req.url,true);
 	var pathname = "public" + urlData.pathname;
-	
-	fs.readFile(pathname, function (err, html) {
+
+	fs.exists(pathname, function(exists){
+		if (exists){
+			fs.readFile(pathname, function (err, html) {
 		    if (err) {
-		        throw err; 
+		        throw err;
 		    }       
 		    res.end(html);
+			});
+		}else{
+			res.writeHead(404);
+			res.end("No existe!")
+		}
 	});
 });
 
