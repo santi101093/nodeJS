@@ -5,7 +5,7 @@ server.on("request", function(req,res){
 	res.end(getHour());
 });
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 
 function getHour(){
 	var currentdate = new Date();
