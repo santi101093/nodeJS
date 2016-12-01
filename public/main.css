@@ -1,0 +1,22 @@
+body{
+    background-color: aqua;
+}
+header{
+    background-color: beige;
+}
+.content{
+    background-color: blue;
+}
+footer{
+    background-color: blueviolet;
+}
+header #logos{
+    text-align: center;
+}
+header .links{
+    text-align: center;
+    color: white;
+    border: dashed;
+    border: solid;
+
+}

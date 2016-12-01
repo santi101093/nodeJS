@@ -1,0 +1,25 @@
+function Articulo(titulo,contenido){
+    this.titulo = titulo;
+    this.contenido = contenido;
+};
+
+Articulo.prototype.render= function(){
+    return '<articule><div><h3>' + this.titulo + '</h3></div><div><p>' +  this.contenido + '</p>></div>></articule>>';
+};
+
+
+var manejadorDeArticulos = {};
+manejadorDeArticulos.load= function() {
+    var articulo1 = new Articulo("noticia 1", "cuerpo 1");
+    var articulo2= new Articulo("noticia 2", "cuerpo 2");
+    var articulo3 = new Articulo("noticia 3", "cuerpo 3");
+    this.articulos = [articulo1, articulo2, articulo3];
+};
+
+manejadorDeArticulos.render = function(element){
+    var result= "";
+    for (var i =0; i<this.articulos.length;i++){
+        result = this.articulos[i].render();
+    }
+    document.getElementById(element).innerHTML =result;
+};
