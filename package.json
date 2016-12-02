@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/santi101093/nodeJS/issues"
   },
-  "homepage": "https://github.com/santi101093/nodeJS#readme"
+  "homepage": "https://github.com/santi101093/nodeJS#readme",
+  "dependencies": {
+    "mu2": "^0.5.21"
+  }
 }

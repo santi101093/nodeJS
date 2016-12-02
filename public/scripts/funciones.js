@@ -8,7 +8,7 @@ function Articulo(titulo,contenido,id){
 
 Articulo.prototype.render= function() {
         if (samePage == true) {
-            return '<articule><div border:solid ><h3>' + this.titulo + '</h3></div><div><p>' + this.contenido + '</p></div></articule>'
+            return '<articule><div border:solid><h3>' + this.titulo + '</h3></div><div><p>' + this.contenido + '</p></div></articule>'
                 + '<a href=pages/articulo' + this.id + '.html> Leer mas </a>';
         }else{
             '<articule><div><h3>' + this.titulo + '</h3></div><div><p>' + this.contenido + '</p></div></articule>'
@@ -26,7 +26,7 @@ function getIframe(){
 
 var manejadorDeArticulos = {};
 manejadorDeArticulos.load= function() {
-    var articulo1 = new Articulo("noticia 1", "cuerpo 1",1);
+    var articulo1 = new Articulo("noticia 1","cuerpo 1",1);
     var articulo2= new Articulo("noticia 2", "cuerpo 2",2);
     var articulo3 = new Articulo("noticia 3", "cuerpo 3",3);
     this.articulos = [articulo1, articulo2, articulo3];

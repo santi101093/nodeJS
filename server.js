@@ -17,7 +17,12 @@ server.on("request", function(req,res){
 			});
 		}else{
 			res.writeHead(404);
-			res.end("No existe!")
+			fs.readFile("public/pages/error.html", function (err, html) {
+				if (err) {
+					throw err;
+				}
+				res.end(html);
+			});
 		}
 	});
 });
