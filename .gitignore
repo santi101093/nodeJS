@@ -1,3 +1,4 @@
 # Ignorar el contenido de las carpetas log y cache
 node_modules/
+.idea
 .DS_Store

@@ -8,8 +8,8 @@ function Articulo(titulo,contenido,id){
 
 Articulo.prototype.render= function() {
         if (samePage == true) {
-            return '<articule><div><h3>' + this.titulo + '</h3></div><div><p>' + this.contenido + '</p></div></articule>'
-                + '<a href=articulo' + this.id + '.html> Leer mas </a>';
+            return '<articule><div border:solid ><h3>' + this.titulo + '</h3></div><div><p>' + this.contenido + '</p></div></articule>'
+                + '<a href=pages/articulo' + this.id + '.html> Leer mas </a>';
         }else{
             '<articule><div><h3>' + this.titulo + '</h3></div><div><p>' + this.contenido + '</p></div></articule>'
             // return '<iframe src=articulo' + this.id + '.html '+
