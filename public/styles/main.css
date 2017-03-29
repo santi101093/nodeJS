@@ -19,5 +19,8 @@ header .links{
     color: white;
     border: dashed;
     border: solid;
-
+}
+.marco{
+    border: solid;
+    color: black;
 }

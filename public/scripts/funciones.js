@@ -8,7 +8,7 @@ function Articulo(titulo,contenido,id){
 
 Articulo.prototype.render= function() {
         if (samePage == true) {
-            return '<articule><div border:solid><h3>' + this.titulo + '</h3></div><div><p>' + this.contenido + '</p></div></articule>'
+            return '<div border-style: solid><articule><div><h3>' + this.titulo + '</h3></div><div><p>' + this.contenido + '</p></div></articule><div>'
                 + '<a href=pages/articulo' + this.id + '.html> Leer mas </a>';
         }else{
             '<articule><div><h3>' + this.titulo + '</h3></div><div><p>' + this.contenido + '</p></div></articule>'
