@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/santi101093/nodeJS.git"
+    "url": "git+https://github.com/sgarcete/nodeJS.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/santi101093/nodeJS/issues"
+    "url": "https://github.com/sgarcete/nodeJS/issues"
   },
-  "homepage": "https://github.com/santi101093/nodeJS#readme",
+  "homepage": "https://github.com/sgarcete/nodeJS#readme",
   "dependencies": {
     "mu2": "^0.5.21"
   }
